@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: logs-inject-tool
-        image: nginx:1.7.9
+        image: rdxmaor/logs_inject_tool:latest
