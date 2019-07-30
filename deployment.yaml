@@ -1,11 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: logs_inject_tool-deployment
+  name: logs-inject-tool-deployment
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: logs-inject-tool
   template:
+    metadata:
+      labels:
+        app: logs-inject-tool
     spec:
       containers:
-      - name: logs_inject_tool
+      - name: logs-inject-tool
         image: nginx:1.7.9
